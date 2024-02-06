@@ -12,7 +12,9 @@
         <property name="show_sql">true</property>
          <property name="hibernate.current_session_context_class">thread</property>
 
-   <!--    <mapping class="com.dashboard.Java_FX_Full.Customer"/>-->
+     <mapping class="com.myproject.CrudOperation.model.Customer"/>
       
     </session-factory>
 </hibernate-configuration>
+
+

@@ -1,8 +1,4 @@
-package util;
-
-
-
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+package com.myproject.CrudOperation.util;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -16,6 +12,7 @@ public class HibernateUtil {
 		try {
 			// Create the SessionFactory from hibernate.cfg.xml
 			Configuration configuration = new Configuration().configure("hibernate.cfg.xml");
+
 			return configuration.buildSessionFactory(
 					new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build());
 		} catch (Exception e) {
