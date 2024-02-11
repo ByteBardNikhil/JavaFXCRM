@@ -12,7 +12,10 @@
         <property name="show_sql">true</property>
          <property name="hibernate.current_session_context_class">thread</property>
 
-     <mapping class="com.myproject.CrudOperation.model.Customer"/>
+     <mapping class="com.myproject.CrudOperation.model.Section"/>
+     <mapping class="com.myproject.CrudOperation.model.Faculty"/>
+     <mapping class="com.myproject.CrudOperation.model.Student"/>
+     <mapping class="com.myproject.CrudOperation.model.Subject"/>
       
     </session-factory>
 </hibernate-configuration>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="283.0" prefWidth="487.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="98.0" layoutY="28.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="83.0" text="Student" />
+      <Button layoutX="275.0" layoutY="163.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="83.0" text="Classes" />
+      <Button layoutX="98.0" layoutY="163.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="83.0" text="Subjects" />
+      <Button layoutX="275.0" layoutY="28.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="83.0" text="Faculty" />
+      <Label fx:id="studentCount" layoutX="126.0" layoutY="109.0" text="Label" />
+      <Label fx:id="subjectsCount" layoutX="126.0" layoutY="232.0" text="Label" />
+      <Label fx:id="facultyCount" layoutX="303.0" layoutY="109.0" text="Label" />
+      <Label fx:id="classesCount" layoutX="303.0" layoutY="232.0" text="Label" />
+   </children>
+</AnchorPane>

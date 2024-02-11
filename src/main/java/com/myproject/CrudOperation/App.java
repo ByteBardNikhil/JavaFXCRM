@@ -1,53 +1,47 @@
 package com.myproject.CrudOperation;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
+import com.myproject.CrudOperation.Controller.FormController;
+import com.myproject.CrudOperation.Controller.MainController;
 
-import com.myproject.CrudOperation.model.Customer;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        // Create Hibernate configuration
-        Configuration configuration = new Configuration();
-        configuration.addAnnotatedClass(Customer.class);
-        configuration.configure("hibernate.cfg.xml");
 
-        // Create SessionFactory
-        SessionFactory factory = configuration.buildSessionFactory();
+public class App extends Application   
+{       
+	    public static void main(String[] args) {
+	        launch(args);
+	    }
 
-        // Obtain Session from SessionFactory
-        Session session = factory.getCurrentSession();
+		@Override
+		public void start(Stage stage) throws Exception {
+			
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Main.fxml"));
+			
+			MainController controller=new MainController();
+			loader.setController(controller);
+			
+			Parent root = loader.load();
+			
+			Scene scene = new Scene(root);
+			
+			stage.setScene(scene);
+			
+			stage.show();
+			
+//			controller.setForm();
+			
+			
+			
+		}
 
-        try {
-            // Begin transaction
-            session.beginTransaction();
+}	 
+		 
 
-         // Create a new Customer object using the parameterized constructor
-            Customer customer = new Customer("John", "Doe", "1990-01-01", "Engineer", "50000");
+		 
+		 
+		 
 
-         
-
-            // Save the Customer object to the database
-            session.save(customer);
-            // Commit transaction (this will trigger schema generation)
-            session.getTransaction().commit();
-
-            System.out.println("Schema created successfully!");
-        } catch (Exception e) {
-            // Rollback transaction if an error occurs
-            session.getTransaction().rollback();
-            e.printStackTrace();
-        } finally {
-            // Close the session and factory
-            session.close();
-            factory.close();
-        }
-    }
-}

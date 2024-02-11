@@ -16,11 +16,13 @@
 
   <dependencies>
 	  
+<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
 <dependency>
-        <groupId>org.hibernate</groupId>
-        <artifactId>hibernate-core</artifactId>
-        <version>5.6.4.Final</version> <!-- Use the latest version available -->
-    </dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>5.3.23.Final</version>
+</dependency>
+
 
 <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
@@ -39,12 +41,12 @@
     <type>pom</type>
 </dependency>
 <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-controls -->
+<!-- https://mvnrepository.com/artifact/org.openjfx/javafx-controls -->
 <dependency>
     <groupId>org.openjfx</groupId>
     <artifactId>javafx-controls</artifactId>
-    <version>23-ea+3</version>
+    <version>21.0.2</version>
 </dependency>
-
 
     <dependency>
       <groupId>junit</groupId>

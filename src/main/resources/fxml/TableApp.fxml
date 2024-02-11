@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="472.0" maxWidth="700.0" minHeight="207.0" minWidth="500.0" prefHeight="312.0" prefWidth="524.0" styleClass="root" stylesheets="lankydan/tutorials/fxml/css.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+	<children>
+		<VBox prefHeight="215.0" prefWidth="524.0" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+      				<TableView fx:id="table" prefHeight="215.0" prefWidth="506.0">
+      					<columns>
+      						<TableColumn fx:id="firstName" prefWidth="83.0" text="First Name">
+      							<cellValueFactory>
+      								<PropertyValueFactory property="firstName" />
+      							</cellValueFactory>
+      						</TableColumn>
+      						<TableColumn fx:id="surname" prefWidth="109.0" text="Surname">
+      							<cellValueFactory>
+      								<PropertyValueFactory property="surname" />
+      							</cellValueFactory>
+      						</TableColumn>
+      						<TableColumn fx:id="dateOfBirthColumn" prefWidth="106.0" text="Date of Birth">
+      							<cellValueFactory>
+      								<PropertyValueFactory property="dateOfBirth" />
+      							</cellValueFactory>
+      						</TableColumn>
+      						<TableColumn fx:id="occupation" prefWidth="89.0" text="Occupation">
+      							<cellValueFactory>
+      								<PropertyValueFactory property="occupation" />
+      							</cellValueFactory>
+      						</TableColumn>
+      						<TableColumn fx:id="salaryColumn" prefWidth="111.0" text="Salary">
+      							<cellValueFactory>
+      								<PropertyValueFactory property="salary" />
+      							</cellValueFactory>
+      						</TableColumn>
+      					</columns>
+      				</TableView>
+         </children>
+		</VBox>
+				<AnchorPane layoutX="122.0" layoutY="313.0" />
+   <Button fx:id="addButton" layoutX="84.0" layoutY="256.0" mnemonicParsing="false" text="Add" onAction="#handleAddButtonClick" />
+
+     <Button fx:id="deletebutton" disable="true" layoutX="211.0" layoutY="215.0" mnemonicParsing="false" text="Delete" />
+
+      <Button fx:id="editbutton" layoutX="340.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="51.0" text="Edit" onAction="#handleEditButtonClick"/>
+	</children>
+</AnchorPane>
