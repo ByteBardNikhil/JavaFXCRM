@@ -23,19 +23,14 @@
       								<PropertyValueFactory property="surname" />
       							</cellValueFactory>
       						</TableColumn>
-      						<TableColumn fx:id="dateOfBirthColumn" prefWidth="106.0" text="Date of Birth">
+      						<TableColumn fx:id="dateOfBirthColumn" prefWidth="106.0" text="Salary">
       							<cellValueFactory>
       								<PropertyValueFactory property="dateOfBirth" />
       							</cellValueFactory>
       						</TableColumn>
-      						<TableColumn fx:id="occupation" prefWidth="89.0" text="Occupation">
+      						<TableColumn fx:id="occupation" prefWidth="89.0" text="Subject">
       							<cellValueFactory>
       								<PropertyValueFactory property="occupation" />
-      							</cellValueFactory>
-      						</TableColumn>
-      						<TableColumn fx:id="salaryColumn" prefWidth="111.0" text="Salary">
-      							<cellValueFactory>
-      								<PropertyValueFactory property="salary" />
       							</cellValueFactory>
       						</TableColumn>
       					</columns>
@@ -43,10 +38,10 @@
          </children>
 		</VBox>
 				<AnchorPane layoutX="122.0" layoutY="313.0" />
-   <Button fx:id="addButton" layoutX="84.0" layoutY="256.0" mnemonicParsing="false" text="Add" onAction="#handleAddButtonClick" />
+   <Button fx:id="addButton" layoutX="84.0" layoutY="256.0" mnemonicParsing="false" onAction="#handleAddButtonClick" text="Add" />
 
      <Button fx:id="deletebutton" disable="true" layoutX="211.0" layoutY="215.0" mnemonicParsing="false" text="Delete" />
 
-      <Button fx:id="editbutton" layoutX="340.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="51.0" text="Edit" onAction="#handleEditButtonClick"/>
+      <Button fx:id="editbutton" layoutX="340.0" layoutY="256.0" mnemonicParsing="false" onAction="#handleEditButtonClick" prefHeight="25.0" prefWidth="51.0" text="Edit" />
 	</children>
 </AnchorPane>
